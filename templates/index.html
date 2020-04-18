@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        Hi Kinjal!!
+        <table style="width:70%">
+        {% for item in items %}
+        <tr style="font-size:x-large;border:5px solid red">
+        <td> <div><p>{{ item.name}}: </td><td><b>{{ item.price }}</b></td></p></div>
+        {% endfor %}
+    </tr>
+    </table>
+    </body>
+</html>
