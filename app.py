@@ -18,7 +18,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
 app.secret_key = 'pratik'
 api = Api(app)
 
-
 jwt = JWT(app,authenticate,identity)
 
 #Item has inherited methods from Resource
@@ -28,7 +27,7 @@ api.add_resource(Store,'/store/<string:name>')
 api.add_resource(Item,'/item/<string:name>')
 api.add_resource(ItemList,'/items')
 api.add_resource(UserRegister,'/createUser')
-api.add_resource(website,'/')
+#api.add_resource(website,'/')
 
 if __name__ == "__main__":
     
