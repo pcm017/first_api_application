@@ -11,6 +11,7 @@ from db import db
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
+app.config['PROPAGATE_EXCEPTIONS'] = True
 # The secret key is used to sign the JWTs. That means that when the application receives the JWT, 
 # it can check whether it was signed with the same secret key.
 # If it was, it means that this app made that JWT, and therefore should accept it as valid (given that it is a valid JWT).
