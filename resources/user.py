@@ -1,4 +1,3 @@
-import sqlite3
 from flask_restful import Resource,Api, reqparse
 from models.user import UserModel
 
@@ -15,5 +14,4 @@ class UserRegister(Resource):
         else:
             user = UserModel(**data) #For each of the keys in data, username = value and password = value
             user.save_to_db()
-            
             return {"message":"user has been created successfully"},201

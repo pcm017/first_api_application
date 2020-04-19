@@ -1,4 +1,3 @@
-import sqlite3
 from db import db
 
 #Init is being used 
