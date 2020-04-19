@@ -11,7 +11,7 @@ class UserRegister(Resource):
         data = UserRegister.parser.parse_args()
         if UserModel.find_by_username(data['username']):
             return {'message':'User already exists'},400
-        else:
-            user = UserModel(**data) #For each of the keys in data, username = value and password = value
-            user.save_to_db()
-            return {"message":"user has been created successfully"},201
+        
+        user = UserModel(**data) #For each of the keys in data, username = value and password = value
+        user.save_to_db()
+        return {"message":"user has been created successfully"},201
